@@ -40,8 +40,6 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
 
   const router = useRouter()
 
-  const username = String(router.query.username)
-
   function handlePreviousMonth() {
     const previousMonthDate = currentDate.subtract(1, 'month')
 
@@ -58,6 +56,7 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
 
   const currentMonth = currentDate.format('MMMM')
   const currentYear = currentDate.format('YYYY')
+  const username = String(router.query.username)
 
   const { data: blockedDates } = useQuery<BlockedDates>(
     ['blocked-dates', currentDate.get('year'), currentDate.get('month')],
@@ -65,7 +64,7 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
       const response = await api.get(`/users/${username}/blocked-dates`, {
         params: {
           year: currentDate.get('year'),
-          month: currentDate.get('month'),
+          month: currentDate.format('MM'),
         },
       })
 
@@ -74,6 +73,10 @@ export function Calendar({ selectedDate, onDateSelected }: CalendarProps) {
   )
 
   const calendarWeeks = useMemo(() => {
+    if (!blockedDates) {
+      return []
+    }
+
     const daysInMonthArray = Array.from({
       length: currentDate.daysInMonth(),
     }).map((_, i) => {
