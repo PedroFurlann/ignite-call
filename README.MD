@@ -16,7 +16,9 @@
 
 ### Deploy da Aplicação :arrow_down:
 
-#### [Scheduling](https://scheduling-nine.vercel.app)
+### [Scheduling](https://scheduling-nine.vercel.app)
+<hr>
+<br>
 
 ## (EN) :us:
 
@@ -34,9 +36,10 @@
 
 ### Application Deployment :arrow_down:
 
-#### [Scheduling](https://scheduling-nine.vercel.app)
+### [Scheduling](https://scheduling-nine.vercel.app)
 
 <hr>
+<br>
 
 ### Imagens do site / Website images :camera:
 
