@@ -12,7 +12,6 @@
 - ####  NodeJS
 - ####  Stitches
 - ####  Prisma
-- ####  MySQL
 
 ### Deploy da Aplicação :arrow_down:
 
@@ -32,7 +31,6 @@
 - ####  NodeJS
 - ####  Stitches
 - ####  Prisma
-- ####  MySQL
 
 ### Application Deployment :arrow_down:
 
