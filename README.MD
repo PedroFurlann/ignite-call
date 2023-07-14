@@ -26,7 +26,7 @@
 
 ### Used Technologies :computer:
 
-- ####  ReactJs
+- ####  React
 - ####  Typescript
 - ####  NextJs
 - ####  NodeJS
