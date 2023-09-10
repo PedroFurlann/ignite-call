@@ -7,12 +7,13 @@ export const Container = styled('div', {
   display: 'flex',
   alignItems: 'center',
   gap: '$20',
-  overflowY: 'scroll',
+  overflowY: 'auto',
 
   '@media(max-width: 1200px)': {
     flexDirection: 'column',
     justifyContent: 'center',
     paddingTop: '$6',
+    paddingBottom: '$6',
   },
 })
 
@@ -30,11 +31,18 @@ export const Hero = styled('div', {
     marginTop: '$2',
     color: '$gray200',
   },
+
+  '@media(max-width: 1200px)': {
+    marginTop: '$80',
+  },
+
+  '@media(max-width: 800px)': {
+    marginTop: '$1',
+  },
 })
 
 export const Preview = styled('div', {
   paddingRight: '$8',
-  overflow: 'hidden',
 
   '@media(max-width: 800px)': {
     display: 'none',
